@@ -1,3 +1,5 @@
+import getSpikesFromAccelerometer from "../utils/StepCalculator.js";
+
 let steps = {}
 steps.current = 
 [
@@ -127,8 +129,8 @@ steps.current =
     },
   ]
 
-  const lastStep = steps.current[29];
-  const firstStep = steps.current[0];
+ const lastStep = steps.current[29];
+ const firstStep = steps.current[0];
  const firstTimeStep =  firstStep.time;
  const startTime = 1659623207777 - 3000; //after press the go button
  const endTime = lastStep.time;
@@ -139,6 +141,7 @@ steps.current =
    const stepTime = stepObject.time - previousTime;
    stepPoints.push(stepTime);
    console.log(stepPoints);
+
 }); 
 stepPoints.length=30;
  console.log(durationTime);
